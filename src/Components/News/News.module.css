@@ -1,0 +1,56 @@
+.background {
+        /* background-image: url(); */
+        height: 745px; /*642px; */
+        width: 1518px;
+        align-items: center;
+}
+.news {
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        padding-top: 90px;
+        padding-bottom: 30px;
+}
+.item {
+        height: 350px;
+        width: 280px;
+        border: 1px solid black;
+        border-radius: 20px;
+        color: white;
+        box-shadow: 0px 0px 15px rgb(73, 71, 71);
+}
+.items {
+        display: flex;
+        justify-content: center;
+        gap: 70px;
+}
+.item1 {
+        background-image: url('../../../public/thunder.png');
+}
+.item2 {
+        background-image: url('../../../public/cloudy.png');
+}
+.item3 {
+        background-image: url('../../../public/sunny.png');
+}
+.delhi {
+        position: absolute;
+        top: 2670px;
+        left: 280px;
+        color: white;
+        font-size: 25px;
+}
+.manipur {
+        position: absolute;
+        top: 2670px;
+        left: 640px;
+        color: white;
+        font-size: 25px;
+}
+.mumbai {
+        position: absolute;
+        top: 2670px;
+        left: 980px;
+        color: white;
+        font-size: 25px;
+}

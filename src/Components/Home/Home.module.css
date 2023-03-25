@@ -1,0 +1,82 @@
+.background {
+        background-image: url('../../../public/de72b8c0-3d32-42ee-8d31-20e1e3eb053d_1679655065020206235.png');
+        /* background-color: aqua; */
+        height: 745px; /*642px; */
+        width: 1518px; /*848px;*/
+}
+.navbar {
+        /* align-items: center;
+        left: 500px; */
+        /* display: grid;
+        place-items: center; */
+        display: flex;
+        justify-content: space-around; /* center horizontally */
+        font-size: 20px;
+        /* gap: px; */
+        /* align-items: center; */
+        /* margin-right: 100px; */
+        /* align-items: center; */
+}
+.navbar a {
+        color: white;
+        text-decoration: none;
+        padding-top: 30px;
+}
+.weatherdetails {
+        position: absolute;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        height: 450px;
+        width: 450px;
+        left: 1000px;
+        top: 200px;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        color: white;
+        font-size: 20px;
+}
+.details {
+        position: absolute;
+        top: 40px;
+        left: 70px;
+}
+.list {
+        position: absolute;
+        top: 150px;
+        left: 70px;
+}
+.horizantal {
+        display: flex;
+        justify-content: space-between;
+        gap: 200px;
+}
+.tempreture {
+        font-size: 150px;
+        color: white;
+        position: absolute;
+        top: 440px;
+        right: 1200px;
+        height: 200px;
+        width: 200px;
+}
+
+.mumbai {
+        /* display: flex;
+        align-items: center;  */
+        font-size: 60px;
+        color: white;
+        position: absolute;
+        top: 550px;
+        right: 990px;
+}
+.coll {
+        /* font-size: 30px; */
+        color: white;
+        position: absolute;
+        top: 645px;
+        right: 920px;
+        font-size: 25px;
+}
+.sun {
+        display: inline;
+        font-size: 50px;
+}

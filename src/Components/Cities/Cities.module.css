@@ -1,0 +1,87 @@
+.background {
+        height: 745px; /*642px; */
+        width: 1518px;
+}
+
+.cities {
+        font-size: 35px;
+        display: flex;
+        justify-content: center;
+        padding-top: 90px;
+}
+.cards {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+}
+.item {
+        height: 350px;
+        width: 280px;
+        border: 1px solid black;
+        border-radius: 20px;
+        color: white;
+        box-shadow: 0px 0px 15px rgb(73, 71, 71);
+}
+.thunder {
+        background-image: url('../../../public/thunder.png');
+}
+.tempcard {
+        position: absolute;
+        height: 100px;
+        width: 280px;
+        top: 1173px;
+        background-color: white;
+        color: black;
+        display: flex;
+        justify-content: space-evenly;
+        border-radius: 0px 0px 20px 20px;
+        /* font-size: 30px; */
+}
+.thundertitle {
+        position: absolute;
+        top: 1080px;
+        left: 270px;
+        color: white;
+}
+.tempreturedeg {
+        margin-top: 15px;
+        font-size: 60px;
+}
+
+.cloudy {
+        background-image: url('../../../public/cloudy.png');
+}
+.cloudytitle {
+        position: absolute;
+        top: 1080px;
+        left: 630px;
+        color: white;
+}
+.sunny {
+        background-image: url('../../../public/sunny.png');
+}
+.sunnytitle {
+        position: absolute;
+        top: 1080px;
+        left: 993px;
+}
+.search {
+        display: flex;
+        justify-content: center;
+}
+.searchbar {
+        position: absolute;
+        margin-top: 100px;
+        left: 500px;
+        width: 35%;
+        padding: 40px;
+        border-radius: 20px 0px 0px 20px;
+        /* border: none; */
+}
+.sb {
+        position: absolute;
+        top: 1374px;
+        left: 1115px;
+        font-size: 76px;
+        border-radius: 0px 20px 20px 0px;
+}
