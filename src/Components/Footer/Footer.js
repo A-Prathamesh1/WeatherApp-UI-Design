@@ -7,14 +7,24 @@ export const Footer = () => {
                         <h1 className={Classes.weatherapp}>WeatherApp</h1>
                         <div className={Classes.links}>
                                 <ul className={Classes.pages}>
-                                        <li>Home</li>
-                                        <li>Cities</li>
-                                        <li>News</li>
+                                        <li>
+                                                <a href="#">Home</a>
+                                        </li>
+                                        <li>
+                                                <a href="#">Cities</a>
+                                        </li>
+                                        <li>
+                                                <a href="#">News</a>
+                                        </li>
                                 </ul>
-                                <div className={Classes.misc}>
-                                        <a>Contact Us</a>
-                                        <a>FAQs</a>
-                                </div>
+                                <ul className={Classes.misc}>
+                                        <li>
+                                                <a href="#">Contact Us</a>
+                                        </li>
+                                        <li>
+                                                <a href="#">FAQs</a>
+                                        </li>
+                                </ul>
                         </div>
                 </div>
         );

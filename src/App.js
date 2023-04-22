@@ -2,7 +2,7 @@ import './App.css';
 import { Home } from './Components/Home/Home';
 import { Cities } from './Components/Cities/Cities';
 import { News } from './Components/News/News';
-import { Earth } from './Components/Earth';
+import { Earth } from './Components/Earth/Earth';
 import { Footer } from './Components/Footer/Footer';
 
 function App() {

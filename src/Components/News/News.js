@@ -12,6 +12,13 @@ export const News = () => {
                                         <p className={Classes.delhi}>
                                                 Thunder Strikes Delhi
                                         </p>
+                                        <div className={Classes.overlay}>
+                                                <button
+                                                        className={Classes.text}
+                                                >
+                                                        Read More
+                                                </button>
+                                        </div>
                                 </div>
                                 <div
                                         className={`${Classes.item}  ${Classes.item2}`}
@@ -19,6 +26,13 @@ export const News = () => {
                                         <p className={Classes.manipur}>
                                                 Cloudstorms in Manipur
                                         </p>
+                                        <div className={Classes.overlay1}>
+                                                <button
+                                                        className={Classes.text1}
+                                                >
+                                                        Read More
+                                                </button>
+                                        </div>
                                 </div>
                                 <div
                                         className={`${Classes.item}  ${Classes.item3}`}
@@ -26,6 +40,13 @@ export const News = () => {
                                         <p className={Classes.mumbai}>
                                                 It's Summer in Mumbai
                                         </p>
+                                        <div className={Classes.overlay2}>
+                                                <button
+                                                        className={Classes.text2}
+                                                >
+                                                        Read More
+                                                </button>
+                                        </div>
                                 </div>
                         </div>
                 </div>

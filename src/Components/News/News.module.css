@@ -1,5 +1,4 @@
 .background {
-        /* background-image: url(); */
         height: 745px; /*642px; */
         width: 1518px;
         align-items: center;
@@ -12,9 +11,8 @@
         padding-bottom: 30px;
 }
 .item {
-        height: 350px;
+        height: 450px;
         width: 280px;
-        border: 1px solid black;
         border-radius: 20px;
         color: white;
         box-shadow: 0px 0px 15px rgb(73, 71, 71);
@@ -24,6 +22,7 @@
         justify-content: center;
         gap: 70px;
 }
+
 .item1 {
         background-image: url('../../../public/thunder.png');
 }
@@ -54,3 +53,95 @@
         color: white;
         font-size: 25px;
 }
+.overlay {
+        position: absolute;
+        height: 450px;
+        width: 280px;
+        border-radius: 20px;
+        opacity: 0;
+        transition: 0.9s ease;
+        background-color: #131414;
+}
+
+.text {
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+}
+.overlay1 {
+        position: absolute;
+        height: 450px;
+        width: 280px;
+        border-radius: 20px;
+        opacity: 0;
+        transition: 0.9s ease;
+        background-color: #131414;
+}
+
+.text1 {
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+}
+.overlay2 {
+        position: absolute;
+        height: 450px;
+        width: 280px;
+        border-radius: 20px;
+        opacity: 0;
+        transition: 0.9s ease;
+        background-color: #131414;
+}
+
+.text2 {
+        color: black;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+}
+@keyframes slider {
+        from {
+                /* left: 0px; */
+                top: 0px;
+        }
+        to {
+                /* left: ; */
+                top: 40px;
+        }
+}
+.item1:hover .overlay {
+        opacity: 0.9;
+        /* animation-name: slider;
+        animation-duration: 1s;
+        animation-timing-function: ease; */
+}
+.item2:hover .overlay1 {
+        opacity: 0.9;
+}
+.item3:hover .overlay2 {
+        opacity: 0.9;
+}
+
+/* .overlay {
+       
+} */
