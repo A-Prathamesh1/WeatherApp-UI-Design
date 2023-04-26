@@ -59,21 +59,21 @@
         width: 200px;
 }
 
-.mumbai {
+.city {
         /* display: flex;
         align-items: center;  */
         font-size: 60px;
         color: white;
         position: absolute;
         top: 550px;
-        right: 990px;
+        right: 1060px;
 }
 .coll {
         /* font-size: 30px; */
         color: white;
         position: absolute;
-        top: 645px;
-        right: 920px;
+        top: 665px;
+        right: 870px;
         font-size: 25px;
 }
 .sun {

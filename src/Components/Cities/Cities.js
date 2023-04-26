@@ -1,72 +1,81 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Classes from './Cities.module.css';
 import { FaSearch } from 'react-icons/fa';
+import { City } from './City';
 
+const activeClass = (temp) => {
+        switch (temp) {
+                case temp < 25:
+                        return 'thunder';
+                case temp < 30 && temp > 25:
+                        return 'cloudy';
+                case temp > 30:
+                        return 'sunny';
+                default:
+                        return 'sunny';
+        }
+};
 export const Cities = () => {
+        const API_KEY = 'f63cb451e699e81b8c81a6abcd88cd2c';
+        let cities = ['Delhi', 'Chennai', 'Jaipur'];
+
+        const [results, setResults] = useState([]);
+
+        let result = [];
+
+        useEffect(() => {
+                const fetchDetails = async () => {
+                        for (const city of cities) {
+                                const response = await fetch(
+                                        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+                                );
+                                const jsonData = await response.json();
+                                result.push(jsonData);
+                        }
+                        console.log(result);
+                        setResults(result);
+                };
+                fetchDetails();
+                return () => {
+                        console.log('cleanup');
+                        setResults([]);
+                        result = [];
+                };
+        }, []);
+
         return (
                 <div className={Classes.background}>
                         <h1 className={Classes.cities}>Cities</h1>
                         <div className={Classes.cards}>
-                                <div
-                                        className={`${Classes.item} ${Classes.thunder}`}
-                                >
-                                        <h1 className={Classes.thundertitle}>
-                                                Thunder
-                                        </h1>
-                                        <div className={Classes.tempcard}>
-                                                <h1
-                                                        className={
-                                                                Classes.tempreturedeg
+                                {results.map((city) => {
+                                        return (
+                                                <City
+                                                        Class1={
+                                                                'item ' +
+                                                                activeClass(
+                                                                        city
+                                                                                .main
+                                                                                .temp -
+                                                                                273.15
+                                                                )
                                                         }
-                                                >
-                                                        24&deg;
-                                                </h1>
-                                                <div>
-                                                        <h2>Delhi</h2>
-                                                        <h3>09/03/2023</h3>
-                                                </div>
-                                        </div>
-                                </div>
-                                <div
-                                        className={`${Classes.item} ${Classes.cloudy}`}
-                                >
-                                        <h1 className={Classes.cloudytitle}>
-                                                Cloudy
-                                        </h1>
-                                        <div className={Classes.tempcard}>
-                                                <h1
-                                                        className={
-                                                                Classes.tempreturedeg
+                                                        title={activeClass(
+                                                                city.main.temp -
+                                                                        273.15
+                                                        )}
+                                                        temp={city.main.temp}
+                                                        city={city.name}
+                                                        date={
+                                                                new Date()
+                                                                        .toLocaleString()
+                                                                        .split(
+                                                                                ' '
+                                                                        )[0]
                                                         }
-                                                >
-                                                        29&deg;
-                                                </h1>
-                                                <div>
-                                                        <h2>Chennai</h2>
-                                                        <h3>09/03/2023</h3>
-                                                </div>
-                                        </div>
-                                </div>
-                                <div
-                                        className={`${Classes.item} ${Classes.sunny}`}
-                                >
-                                        <h1 className={Classes.sunnytitle}>
-                                                Sunny
-                                        </h1>
-                                        <div className={Classes.tempcard}>
-                                                <h1
-                                                        className={
-                                                                Classes.tempreturedeg
-                                                        }
-                                                >
-                                                        40&deg;
-                                                </h1>
-                                                <div>
-                                                        <h2>Jaipur</h2>
-                                                        <h3>09/03/2023</h3>
-                                                </div>
-                                        </div>
-                                </div>
+                                                        key={city.name}
+                                                />
+                                        );
+                                })}
                         </div>
                         <div className={Classes.search}>
                                 <input

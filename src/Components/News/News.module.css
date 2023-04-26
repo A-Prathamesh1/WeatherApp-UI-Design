@@ -141,7 +141,8 @@
 .item3:hover .overlay2 {
         opacity: 0.9;
 }
-
-/* .overlay {
-       
-} */
+.city {
+        font-size: 23px;
+        position: absolute;
+        top:2780px;
+}
