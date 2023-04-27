@@ -4,7 +4,7 @@ import { CityNews } from './CityNews';
 
 export const News = () => {
         const cities = ['Delhi', 'Chennai', 'Mumbai'];
-        const API_KEY = 'f63cb451e699e81b8c81a6abcd88cd2c';
+        const API_KEY = process.env.REACT_APP_API_KEY;
         let result = [];
         const [results, setResults] = useState([]);
         const fetchNews = async () => {
@@ -21,7 +21,7 @@ export const News = () => {
                 fetchNews();
                 return () => {
                         setResults([]);
-                        result = [];
+                        // result = [];
                 };
         }, []);
 

@@ -16,7 +16,7 @@ const activeClass = (temp) => {
         }
 };
 export const Cities = () => {
-        const API_KEY = 'f63cb451e699e81b8c81a6abcd88cd2c';
+        const API_KEY = process.env.REACT_APP_API_KEY;
         let cities = ['Delhi', 'Chennai', 'Jaipur'];
 
         const [results, setResults] = useState([]);
@@ -39,7 +39,7 @@ export const Cities = () => {
                 return () => {
                         console.log('cleanup');
                         setResults([]);
-                        result = [];
+                        // result = [];
                 };
         }, []);
 

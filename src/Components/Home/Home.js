@@ -4,7 +4,7 @@ import { FaSun } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 export const Home = () => {
-        const API_KEY = 'f63cb451e699e81b8c81a6abcd88cd2c';
+        const API_KEY = process.env.REACT_APP_API_KEY;
         const URL = `http://api.openweathermap.org/data/2.5/weather?q=Pune&appid=${API_KEY}`;
 
         let date1 = new Date();
@@ -22,11 +22,6 @@ export const Home = () => {
                                 .then((data) => {
                                         console.log('this ' + data);
                                         setCity(data.name);
-                                        // setDate(
-                                        //         data.list[0].dt_txt.split(
-                                        //                 ' '
-                                        //         )[0]
-                                        // );
                                         setClouds(data.clouds.all);
                                         setHumidity(data.main.humidity);
                                         setWind(data.wind.speed);
