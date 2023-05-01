@@ -1,4 +1,6 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, {
+        //  useCallback,
+         useEffect, useState } from 'react';
 import Classes from './News.module.css';
 import { CityNews } from './CityNews';
 

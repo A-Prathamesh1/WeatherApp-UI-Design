@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Classes from './Home.module.css';
 import { FaSun } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+
 
 export const Home = () => {
         const API_KEY = process.env.REACT_APP_API_KEY;
@@ -34,9 +34,9 @@ export const Home = () => {
         return (
                 <div className={Classes.background}>
                         <div className={Classes.navbar}>
-                                <NavLink to="/">Home</NavLink>
-                                <NavLink to="/cities">Cities</NavLink>
-                                <NavLink to="/news">News</NavLink>
+                                <a href="#">Home</a>
+                                <a to="#">Cities</a>
+                                <a to="#">News</a>
                         </div>
                         <div className={Classes.weatherdetails}>
                                 <h4 className={Classes.details}>
