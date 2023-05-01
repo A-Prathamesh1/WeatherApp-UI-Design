@@ -7,14 +7,14 @@ export const Home = () => {
         const API_KEY = process.env.REACT_APP_API_KEY;
         const URL = `http://api.openweathermap.org/data/2.5/weather?q=Pune&appid=${API_KEY}`;
 
-        let date1 = new Date();
         const [city, setCity] = useState('Pune');
-        const [date, setDate] = useState(date1.toGMTString());
         const [clouds, setClouds] = useState(null);
         const [humidity, setHumidity] = useState(null);
         const [wind, setWind] = useState(null);
         const [temperature, setTemperature] = useState(null);
 
+        let date1 = new Date();
+        const date = date1.toGMTString();
         useEffect(() => {
                 const fetchWeatherDetails = async () => {
                         await fetch(URL)

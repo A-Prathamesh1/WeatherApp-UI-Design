@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Classes from './News.module.css';
 import { CityNews } from './CityNews';
 
@@ -7,21 +7,43 @@ export const News = () => {
         const API_KEY = process.env.REACT_APP_API_KEY;
         let result = [];
         const [results, setResults] = useState([]);
-        const fetchNews = async () => {
-                for (const city of cities) {
-                        const response = await fetch(
-                                `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
-                        );
-                        const jsonData = await response.json();
-                        result.push(jsonData);
-                }
-                setResults(result);
-        };
+
+        // const fetchNews = useCallback(async () => {
+        //         try {
+        //                 const response = await Promise.all(
+        //                         cities.map((city) =>
+        //                                 fetch(
+        //                                         `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+        //                                 ).then((res) => res.json())
+        //                         )
+        //                 );
+        //                 console.log(response);
+        //                 setResults(response);
+        //         } catch (error) {
+        //                 console.log(error);
+        //         }
+        // }, [cities, API_KEY]);
+
+        // useEffect(() => {
+        //         fetchNews();
+        //         return () => {
+        //                 setResults([]);
+        //         };
+        // }, [fetchNews]);
         useEffect(() => {
+                const fetchNews = async () => {
+                        for (const city of cities) {
+                                const response = await fetch(
+                                        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+                                );
+                                const jsonData = await response.json();
+                                result.push(jsonData);
+                        }
+                        setResults(result);
+                };
                 fetchNews();
                 return () => {
                         setResults([]);
-                        // result = [];
                 };
         }, []);
 

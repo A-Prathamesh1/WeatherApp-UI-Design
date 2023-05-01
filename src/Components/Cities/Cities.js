@@ -39,7 +39,6 @@ export const Cities = () => {
                 return () => {
                         console.log('cleanup');
                         setResults([]);
-                        // result = [];
                 };
         }, []);
 
