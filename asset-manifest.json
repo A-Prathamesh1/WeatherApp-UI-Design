@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/A-Prathamesh1/WeatherApp-UI-Design/static/css/main.dc5d2a6c.css",
+    "main.js": "/A-Prathamesh1/WeatherApp-UI-Design/static/js/main.516ec42a.js",
+    "static/media/de72b8c0-3d32-42ee-8d31-20e1e3eb053d_png": "/A-Prathamesh1/WeatherApp-UI-Design/static/media/de72b8c0-3d32-42ee-8d31-20e1e3eb053d_1679655065020206235.5149e213a7017ba6cefc.png",
+    "static/media/Earth.png": "/A-Prathamesh1/WeatherApp-UI-Design/static/media/Earth.f98924078776ddc328f0.png",
+    "static/media/cloudy.png": "/A-Prathamesh1/WeatherApp-UI-Design/static/media/cloudy.19b09de5b819bbec1f81.png",
+    "static/media/thunder.png": "/A-Prathamesh1/WeatherApp-UI-Design/static/media/thunder.6801cfc5f8080dfddf83.png",
+    "static/media/sunny.png": "/A-Prathamesh1/WeatherApp-UI-Design/static/media/sunny.8b7df51b44e372bb1a90.png",
+    "index.html": "/A-Prathamesh1/WeatherApp-UI-Design/index.html",
+    "main.dc5d2a6c.css.map": "/A-Prathamesh1/WeatherApp-UI-Design/static/css/main.dc5d2a6c.css.map",
+    "main.516ec42a.js.map": "/A-Prathamesh1/WeatherApp-UI-Design/static/js/main.516ec42a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.dc5d2a6c.css",
+    "static/js/main.516ec42a.js"
+  ]
+}
